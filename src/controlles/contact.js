@@ -72,4 +72,18 @@ router.delete('/', async (req, res) => {
 
 })
 
+router.get('/byId', async (req, res) => {
+  const { id } = req.query;
+  
+  if(!id) res.status(400).send({ error: "Paramentro 'id' não está definido" })
+
+  try {
+    const contact = await Contact.findById(id);
+  
+    res.send({ data: contact })
+  } catch {
+    res.status(400).send({ error: "Bad Request" })
+  }
+})
+
 module.exports = app => app.use('/contact', router)
