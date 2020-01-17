@@ -1,0 +1,16 @@
+{
+  "name": "crud-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CaioAugustoV/crud-nodejs.git",
+  "author": "Caio Augusto",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.12"
+  }
+}
